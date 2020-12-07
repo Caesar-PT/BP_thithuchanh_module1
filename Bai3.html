@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra isFibonaci</title>
+</head>
+<body>
+<script>
+    function isFibonaci(x){
+        let f1 = 1;
+        let f2 = 1;
+        let number = 2;
+        let fibo = true;
+        if (x < 1){
+            fibo = false;
+            return console.log(fibo);
+        }
+        if ( x < 4){
+            return console.log(fibo);
+        }
+        while (number < x){
+            f1 = f2;
+            f2 = number;
+            number = f1 + f2;
+        }
+        if ( number === x ){
+            return  console.log(fibo);
+        } else {
+            fibo = false;
+            return  console.log(fibo);
+        }
+    }
+    isFibonaci(parseFloat(prompt('Nhập vào số cần kiểm tra')));
+</script>
+</body>
+</html>

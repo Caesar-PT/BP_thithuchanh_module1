@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình tròn</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="300" style="border: black 2px solid">
+</canvas>
+<script>
+    class Circle {
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+        }
+        render(canvas) {
+            canvas.beginPath();
+            canvas.fillStyle = this.color;
+            canvas.arc (this.x, this.y, this.radius, 0, 2 * Math.PI);
+            canvas.stroke();
+            canvas.fill();
+        }
+    }
+    function main(){
+        let c = document.getElementById('myCanvas');
+        let canvas = c.getContext('2d');
+        let circle1 = new Circle(10, 10, 100, '#000000');
+        circle1.render(canvas);
+    }
+    main();
+</script>
+</body>
+</html>
