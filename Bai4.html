@@ -24,8 +24,7 @@
         }
     }
     function main(){
-        let c = document.getElementById('myCanvas');
-        let canvas = c.getContext('2d');
+        let canvas = document.getElementById('myCanvas').getContext('2d');
         let circle1 = new Circle(10, 10, 100, '#000000');
         circle1.renDer(canvas);
     }
